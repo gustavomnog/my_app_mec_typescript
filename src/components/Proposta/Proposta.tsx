@@ -2,11 +2,13 @@ import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom';
 
 import Topo from "./Topo/Topo"
-import Orcamento from "./Orcamento/Orcamento"
-import Loading from "../Loading/Loading"
-import valorTotal from "../Acessos/Acessos"
 import Header from "../Header/Header"
 import api from "../../services/api"
+import Loading from "../Loading/Loading"
+import Orcamento from "./Orcamento/Orcamento"
+import valorTotal from "../CalculoTotal/calculoTotal"
+import Simulador from "../Simulador/Simulador";
+import Comparador from "../Comparador/Comparador";
 
 interface Valores {
   MEN: number,
@@ -104,27 +106,10 @@ const Proposta = () => {
 
       setListaAtual(lista)
 
-      let valoresMecauto: Valores = {
-        MEN: 0,
-        TRI: 0,
-        SEM: 0,
-        SEM2: 0,
-        ANU: 0,
-        ANU2: 0,
-        ANU3: 0,
-        ANU4: 0,
-      }
+      let valoresMecauto: Valores = {} as Valores
+      
 
-      let valoresBox: Valores = {
-        MEN: 0,
-        TRI: 0,
-        SEM: 0,
-        SEM2: 0,
-        ANU: 0,
-        ANU2: 0,
-        ANU3: 0,
-        ANU4: 0,
-      }
+      let valoresBox: Valores = {} as Valores
 
 
       await api.get('/proposta/precosist/22')
@@ -208,6 +193,14 @@ const Proposta = () => {
           valorTotalBox={totalBox}
           acessos={acessos}
         />
+        <Simulador
+          lista={listaAtual}
+          valoresMec={valoresMec}
+          valoresBox={valoresBox}
+          descontoFilial={descontoFilial}
+          acessosProposta={acessos}
+        />
+        <Comparador />
       </>
     )
   }

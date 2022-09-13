@@ -12,31 +12,23 @@ interface Valores {
 }
 
 type Props = {
-  valorSistemaBox: Valores, 
-  acessos: number,
+  valoresTotais: Valores,
+  sistema: string,
 }
 
-const CardBox = ({valorSistemaBox, acessos}: Props) => {
-  const {ANU, ANU2, ANU3, SEM, SEM2, TRI, MEN} = valorSistemaBox
+const CardSistema = ({ valoresTotais, sistema }: Props) => {
+  const { ANU, ANU2, ANU3, SEM, SEM2, TRI, MEN } = valoresTotais
 
   const descontoAnu = Math.round((((MEN * 12) - ANU) / (MEN * 12)) * 100)
   const descontoSem = Math.round((((MEN * 6) - SEM) / (MEN * 6)) * 100)
   const descontoTri = Math.round((((MEN * 3) - TRI) / (MEN * 3)) * 100)
 
-
   return (
     <Container>
-      <Titulo>
-        <span>MECAUTO-BOX</span>
-        <span>Sistema com funções mais básicas.</span>
-        <span><a href="/"><b>CLIQUE AQUI</b></a> para comprar as diferenças</span>
-      </Titulo>
+      <Titulo className={sistema === "MECAUTO" ? "tituloMecauto" : "tituloBox"}>VALORES {sistema}:</Titulo>
       <Tabela>
         <table>
           <tbody>
-            <tr className="acesso">
-              <th colSpan={4}>Acessos simultâneos:{acessos + 5} *</th>
-            </tr>
             <tr className="title">
               <th>&nbsp;</th>
               <th>À vista</th>
@@ -82,4 +74,4 @@ const CardBox = ({valorSistemaBox, acessos}: Props) => {
 }
 
 
-export default CardBox
+export default CardSistema

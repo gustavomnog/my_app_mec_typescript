@@ -11,7 +11,7 @@ interface Valores {
   ANU4: number,
 }
 
-interface Props {
+type Props = {
   valorSistemaMec: Valores, 
   acessos: number,
 }

@@ -13,11 +13,7 @@ function App() {
       <>
         <Routes>
           <Route path=":codproposta/:codcliente"
-            element={
-              <>
-                <Proposta />
-              </>
-            } />
+            element={<Proposta />} />
         </Routes>
         <GlobalStyle />
       </>

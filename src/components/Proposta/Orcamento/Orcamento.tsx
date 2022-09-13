@@ -30,7 +30,7 @@ interface Valores {
   ANU4: number,
 }
 
-interface Props {
+type Props = {
   lista: ListaModulos[], 
   valorTotalMec: Valores, 
   valorTotalBox: Valores, 

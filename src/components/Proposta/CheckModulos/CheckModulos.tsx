@@ -1,7 +1,11 @@
 import { Container } from "./styles"
 
+type Props = {
+  nomeModulo:string, 
+  selecionado:boolean,
+}
 
-const CheckModulos = ({ nomeModulo, selecionado }: {nomeModulo:string, selecionado:boolean}) => {
+const CheckModulos = ({ nomeModulo, selecionado }: Props) => {
 
 
   return (

@@ -16,6 +16,13 @@ color: var(--white);
 font-size: 20px;
 text-align: center;
 
+
+.link {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 span {
   display: block;
   font-size: 13px;

@@ -1,7 +1,7 @@
 import Container from "./styles"
 
 type Props = {
-  sistema: string, 
+  sistema: string,
   handleCheckSystem: () => void,
 }
 
@@ -10,7 +10,7 @@ const RadioSistema = ({ sistema, handleCheckSystem }: Props) => {
     <Container>
       <label className={sistema === "MECAUTO" ? "containerMecauto" : "containerBox"}>
         <div className="input-wrapper">
-          <input type="radio" name="radio" onClick={handleCheckSystem} defaultChecked={sistema === "MECAUTO" ? true : false}/>
+          <input type="radio" name="radio" onClick={handleCheckSystem} defaultChecked={sistema === "MECAUTO" ? true : false} />
           <span className="checkmark"></span>
         </div>
         <span className="text">{sistema}</span>

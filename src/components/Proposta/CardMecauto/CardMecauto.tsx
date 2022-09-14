@@ -1,18 +1,10 @@
+import { Valores } from "../../interfaces/types"
+
 import { Container, Tabela, Titulo } from "./styles"
 
-interface Valores {
-  MEN: number,
-  TRI: number,
-  SEM: number,
-  SEM2: number,
-  ANU: number,
-  ANU2: number,
-  ANU3: number,
-  ANU4: number,
-}
 
 type Props = {
-  valorSistemaMec: Valores, 
+  valorSistemaMec: Valores,
   acessos: number,
 }
 
@@ -23,7 +15,7 @@ const CardMecauto = ({ valorSistemaMec, acessos }: Props) => {
   const descontoSem = Math.round((((MEN * 6) - SEM) / (MEN * 6)) * 100)
   const descontoTri = Math.round((((MEN * 3) - TRI) / (MEN * 3)) * 100)
 
-  
+
   return (
     <Container>
       <Titulo>

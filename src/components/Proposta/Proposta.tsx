@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom'
 
 import Topo from "./Topo/Topo"
 import Header from "../Header/Header"
@@ -7,48 +7,12 @@ import api from "../../services/api"
 import Loading from "../Loading/Loading"
 import Orcamento from "./Orcamento/Orcamento"
 import valorTotal from "../CalculoTotal/calculoTotal"
-import Simulador from "../Simulador/Simulador";
-import Comparador from "../Comparador/Comparador";
+import Simulador from "../Simulador/Simulador"
+import Comparador from "../Comparador/Comparador"
+import Footer from "../Footer/Footer"
 
-interface Valores {
-  MEN: number,
-  TRI: number,
-  SEM: number,
-  SEM2: number,
-  ANU: number,
-  ANU2: number,
-  ANU3: number,
-  ANU4: number,
-}
+import { Valores, ListaModulosApi, ListaModulos } from "../interfaces/types"
 
-interface ModulosApi {
-  CM_COD_MODULO: number,
-  CM_NUM_ID: number,
-  CM_DESCRICAO: string,
-  CM_VAL_MEN: number,
-  CM_VAL_TRI: number,
-  CM_VAL_SEM: number,
-  CM_SEM_2: number,
-  CM_VAL_ANU: number,
-  CM_ANU_2: number,
-  CM_ANU_3: number,
-  CM_ANU_4: number,
-}
-
-interface Modulos {
-  CODMODULO: number,
-  DESCRICAO: string,
-  ID: number,
-  ANU: number,
-  ANU2: number,
-  ANU3: number,
-  ANU4: number,
-  SEM: number,
-  SEM2: number,
-  TRI: number,
-  MEN: number,
-  MARC: boolean,
-}
 
 const Proposta = () => {
   let { codproposta, codcliente } = useParams()
@@ -57,7 +21,7 @@ const Proposta = () => {
   const [validade, setValidade] = useState(new Date())
   const [acessos, setAcessos] = useState(0)
   const [descontoFilial, setDescontoFilial] = useState<string>("")
-  const [listaAtual, setListaAtual] = useState<Modulos[]>([])
+  const [listaAtual, setListaAtual] = useState<ListaModulos[]>([])
   const [valoresMec, setValoresMec] = useState<Valores>({} as Valores)
   const [valoresBox, setValoresBox] = useState<Valores>({} as Valores)
   const [totalMecauto, setTotalMecauto] = useState<Valores>({} as Valores)
@@ -67,7 +31,7 @@ const Proposta = () => {
 
 
   useEffect(() => {
-    let listaModulos: ModulosApi[]
+    let listaModulos: ListaModulosApi[]
     let modulosProposta: { CM_COD_MODULO: number }[]
 
     async function Consultar() {
@@ -107,10 +71,7 @@ const Proposta = () => {
       setListaAtual(lista)
 
       let valoresMecauto: Valores = {} as Valores
-      
-
       let valoresBox: Valores = {} as Valores
-
 
       await api.get('/proposta/precosist/22')
         .then(({ data }) => {
@@ -150,24 +111,22 @@ const Proposta = () => {
 
       const marcados = lista.filter(modulo => modulo.MARC === true)
 
-
-
       marcados.forEach(modulo => {
         let mec: keyof typeof valorMecModulos
         for (mec in valorMecModulos) {
           valorMecModulos[mec] = valorMecModulos[mec] + modulo[mec]
         }
         let box: keyof typeof valorBoxModulos
-        for ( box in valorBoxModulos) {
+        for (box in valorBoxModulos) {
           valorBoxModulos[box] = valorBoxModulos[box] + modulo[box]
         }
       })
 
-       const valorTotalMec = valorTotal(valorMecModulos, descontoFilial, acessos)
-       setTotalMecauto(valorTotalMec)
+      const valorTotalMec = valorTotal(valorMecModulos, descontoFilial, acessos)
+      setTotalMecauto(valorTotalMec)
 
-       const valorTotalBox = valorTotal(valorBoxModulos, descontoFilial, acessos)
-       setTotalBox(valorTotalBox)
+      const valorTotalBox = valorTotal(valorBoxModulos, descontoFilial, acessos)
+      setTotalBox(valorTotalBox)
 
       setCarregando(false)
 
@@ -175,15 +134,17 @@ const Proposta = () => {
     Consultar()
   }, [])
 
+
   if (carregando) {
     return (
       <>
         <Header />
         <Loading />
+        
       </>
     )
   } else {
-    
+
     return (
       <>
         <Topo nome={nome} validade={validade} />
@@ -201,6 +162,7 @@ const Proposta = () => {
           acessosProposta={acessos}
         />
         <Comparador />
+        <Footer />
       </>
     )
   }

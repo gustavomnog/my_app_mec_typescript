@@ -1,23 +1,17 @@
+import { Link } from "react-scroll"
+import { Valores } from "../../interfaces/types"
+
 import { Container, Tabela, Titulo } from "./styles"
 
-interface Valores {
-  MEN: number,
-  TRI: number,
-  SEM: number,
-  SEM2: number,
-  ANU: number,
-  ANU2: number,
-  ANU3: number,
-  ANU4: number,
-}
 
 type Props = {
-  valorSistemaBox: Valores, 
+  valorSistemaBox: Valores,
   acessos: number,
 }
 
-const CardBox = ({valorSistemaBox, acessos}: Props) => {
-  const {ANU, ANU2, ANU3, SEM, SEM2, TRI, MEN} = valorSistemaBox
+const CardBox = ({ valorSistemaBox, acessos }: Props) => {
+
+  const { ANU, ANU2, ANU3, SEM, SEM2, TRI, MEN } = valorSistemaBox
 
   const descontoAnu = Math.round((((MEN * 12) - ANU) / (MEN * 12)) * 100)
   const descontoSem = Math.round((((MEN * 6) - SEM) / (MEN * 6)) * 100)
@@ -29,7 +23,7 @@ const CardBox = ({valorSistemaBox, acessos}: Props) => {
       <Titulo>
         <span>MECAUTO-BOX</span>
         <span>Sistema com funções mais básicas.</span>
-        <span><a href="/"><b>CLIQUE AQUI</b></a> para comprar as diferenças</span>
+        <span><Link className="link" to="comparador" spy={true} smooth={true} offset={50} duration={500}>CLIQUE AQUI</Link> para comparar as diferenças</span>
       </Titulo>
       <Tabela>
         <table>

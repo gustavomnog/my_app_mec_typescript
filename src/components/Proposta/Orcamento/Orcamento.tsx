@@ -1,34 +1,10 @@
 import CheckModulos from "../CheckModulos/CheckModulos"
 import CardMecauto from "../CardMecauto/CardMecauto"
 import CardBox from "../CardBox/CardBox"
+import {ListaModulos, Valores} from "../../interfaces/types"
 
 import { Container, ContainerCards, ContainerModulos, Modulos, Titulo, TituloModulos, Obs } from "./styles"
 
-interface ListaModulos {
-  CODMODULO: number,
-  DESCRICAO: string,
-  ID: number,
-  ANU: number,
-  ANU2: number,
-  ANU3: number,
-  ANU4: number,
-  SEM: number,
-  SEM2: number,
-  TRI: number,
-  MEN: number,
-  MARC: boolean,
-}
-
-interface Valores {
-  MEN: number,
-  TRI: number,
-  SEM: number,
-  SEM2: number,
-  ANU: number,
-  ANU2: number,
-  ANU3: number,
-  ANU4: number,
-}
 
 type Props = {
   lista: ListaModulos[], 
@@ -61,7 +37,7 @@ const Orcamento = ({ lista, valorTotalMec, valorTotalBox, acessos}: Props) => {
       </ContainerModulos>
       <ContainerCards>
         <CardMecauto valorSistemaMec={valorTotalMec} acessos={acessos}/>
-        <CardBox valorSistemaBox={valorTotalBox} acessos={acessos} />
+        <CardBox valorSistemaBox={valorTotalBox} acessos={acessos}/>
       </ContainerCards>
       <Obs>
         <span>* Um acesso está incluso no plano e quatro são cortesia. A partir do sexto acesso, é cobrado valor adicional.</span>

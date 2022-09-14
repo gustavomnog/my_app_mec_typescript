@@ -48,6 +48,9 @@ justify-content: space-between;
 }
 
 .funcao{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   text-transform: capitalize;
   width: 365px;
 

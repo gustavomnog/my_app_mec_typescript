@@ -58,6 +58,10 @@ padding-bottom: 16.13px;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }
+
+  .textBold {
+    font-weight: bold;
+  }
 }
   `
 

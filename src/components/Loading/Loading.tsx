@@ -5,8 +5,6 @@ const { TailSpin } = require("react-loader-spinner")
 
 const Loading = () => {
 
-
-
   return (
     <Container>
       <TailSpin

@@ -1,30 +1,19 @@
 import { useEffect, useState } from "react"
 import api from "../../services/api"
 import CardFuncoes from "./CardFuncoes/CardFuncoes"
+import { Funcoes } from "../interfaces/types"
 
 import { Container, Titulo, ContainerSistema, Sistema } from "./styles"
-
-interface FuncoesApi {
-  CM_COD_FUNCAO: number,
-  CM_GRUPO: string,
-  CM_DESC_FUNC: null | string,
-  CM_SIST_MEC: null | string,
-  CM_SIST_MECBOX: string,
-  CM_COND: null | string,
-  CM_ORDEM_GRUPO: number,
-  CM_ORDEM_FUNC: number,
-  CM_AJUDA: null | string,
-}
 
 
 const Comparador = () => {
   const [carregando, setCarregando] = useState<boolean>(true)
-  const [listaAtual, setListaAtual] = useState<FuncoesApi[][]>([] as FuncoesApi[][])
+  const [listaAtual, setListaAtual] = useState<Funcoes[][]>([] as Funcoes[][])
 
   useEffect(() => {
     async function ObterFuncoes() {
 
-      let listaFuncoesApi = [] as FuncoesApi[]
+      let listaFuncoesApi = [] as Funcoes[]
       await api.get("/tabelas")
         .then(({ data }) => {
           listaFuncoesApi = data
@@ -60,7 +49,7 @@ const Comparador = () => {
   } else {
 
     return (
-      <Container>
+      <Container id="comparador">
         <Titulo>Compare a diferença entre os sistemas</Titulo>
         <ContainerSistema>
           <Sistema className="mecauto">MECAUTO</Sistema>

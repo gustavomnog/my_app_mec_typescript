@@ -7,39 +7,13 @@ import QtdAcessos from "./QtdAcessos/QtdAcessos"
 import CheckModulos from "./CheckModulos/CheckModulos"
 import CardSistema from "./CardSistema/CardSistema"
 import valorTotal from "../CalculoTotal/calculoTotal"
-
+import { Valores, ListaModulos } from "../interfaces/types"
 
 import { Container, Titulo, ContainerSistema, TituloSistema, ContainerRadio, ContainerAcessos, ContainerModulos, TituloModulos, Modulos, ContainerCard, Obs } from "./styles"
 import 'react-toastify/dist/ReactToastify.min.css';
 
-interface Valores {
-  MEN: number,
-  TRI: number,
-  SEM: number,
-  SEM2: number,
-  ANU: number,
-  ANU2: number,
-  ANU3: number,
-  ANU4: number,
-}
-
-interface Modulos {
-  CODMODULO: number,
-  DESCRICAO: string,
-  ID: number,
-  ANU: number,
-  ANU2: number,
-  ANU3: number,
-  ANU4: number,
-  SEM: number,
-  SEM2: number,
-  TRI: number,
-  MEN: number,
-  MARC: boolean,
-}
-
 type Props = {
-  lista: Modulos[],
+  lista: ListaModulos[],
   valoresMec: Valores,
   valoresBox: Valores,
   descontoFilial: string,
@@ -109,9 +83,8 @@ const Simulador = ({ lista, valoresMec, valoresBox, descontoFilial, acessosPropo
         return modulo
       })
       setListaAtual(listaAlterada)
-    }
 
-    else {
+    } else {
 
       const listaAlterada = listaAtual.map(modulo => {
         if (modulo.ID === Number(moduloAlterado.target.id)) {

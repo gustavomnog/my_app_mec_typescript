@@ -1,15 +1,7 @@
+import { Valores } from "../../interfaces/types"
+
 import { Container, Tabela, Titulo } from "./styles"
 
-interface Valores {
-  MEN: number,
-  TRI: number,
-  SEM: number,
-  SEM2: number,
-  ANU: number,
-  ANU2: number,
-  ANU3: number,
-  ANU4: number,
-}
 
 type Props = {
   valoresTotais: Valores,

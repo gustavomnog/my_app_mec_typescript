@@ -8,8 +8,14 @@ const Container = styled.div`
   display: flex;
   font-weight: 800;
   font-size: 20px;
+  justify-content: center;
   color: var(--blue);
-  
+  cursor: pointer;
+
+  @media (max-width: 800px) { 
+  font-size: 18px;
+ }
+
   
   .input-wrapper {
     position: relative;
@@ -58,9 +64,13 @@ const Container = styled.div`
   .containerBox {
     display: flex;
     font-weight: 800;
-  font-size: 20px;
-  color: var(--green-dark);
+    font-size: 20px;
+    color: var(--green-dark);
+    cursor: pointer;
   
+    @media (max-width: 800px) { 
+  font-size: 18px;
+ }
   
   .input-wrapper {
     position: relative;

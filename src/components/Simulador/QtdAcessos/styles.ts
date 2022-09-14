@@ -6,6 +6,10 @@ const Titulo = styled.div`
 margin: 11px 0 20px 0;
 font-weight: 800;
 font-size: 20px;
+
+@media (max-width: 800px) { 
+  font-size: 18px;
+ }
 `
 const Input = styled.div`
 width: 100%;

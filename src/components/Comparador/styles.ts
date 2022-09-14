@@ -9,6 +9,10 @@ margin: 34px auto 0 auto;
 background-color: var(--background-white);
 margin-bottom: 38px;
 padding-bottom: 1px;
+
+@media (max-width: 800px) { 
+  width: 600px;
+ }
 `
 
 const Titulo = styled.div`
@@ -21,6 +25,10 @@ font-weight: 700;
 font-size: 28px;
 color: #FFFFFF;
 background: var(--background-red);
+
+@media (max-width: 800px) { 
+  font-size: 23px;
+ }
 `
 
 const ContainerSistema = styled.div`
@@ -28,9 +36,18 @@ display:flex;
 justify-content:flex-end ;
 padding: 20px 39px;
 
+@media (max-width: 800px) { 
+  padding: 10px 75px;
+ }
+
+
 .mecauto{
   background-color: var(--blue);
   margin-right:20px;
+  
+  @media (max-width: 800px) { 
+    margin-right:70px;
+ }
 }
 
 .box{
@@ -48,6 +65,13 @@ border-radius: 20px;
 font-size: 15px;
 font-weight: 700;
 color: var(--white);
-` 
 
-export {Container, Titulo, ContainerSistema, Sistema}
+@media (max-width: 800px) { 
+  height: 120px;
+  width: 41px;
+  writing-mode: vertical-rl;
+  font-size: 13px;
+ }
+`
+
+export { Container, Titulo, ContainerSistema, Sistema }

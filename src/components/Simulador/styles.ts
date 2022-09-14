@@ -8,6 +8,10 @@ border-radius: 30px;
 margin: 34px auto 0 auto;
 background-color: var(--background-white);
 margin-bottom: 38px;
+
+@media (max-width: 800px) { 
+  width: 600px;
+ }
 `
 
 const Titulo = styled.div`
@@ -20,6 +24,10 @@ font-weight: 700;
 font-size: 28px;
 color: #FFFFFF;
 background: var(--background-red);
+
+@media (max-width: 800px) { 
+  font-size: 23px;
+ }
 `
 
 const ContainerSistema = styled.div`
@@ -33,6 +41,10 @@ const TituloSistema = styled.div`
 margin: 11px 0 20px 0;
 font-weight: 800;
 font-size: 20px;
+
+@media (max-width: 800px) { 
+  font-size: 18px;
+ }
 `
 
 const ContainerRadio = styled.div`
@@ -62,6 +74,10 @@ const TituloModulos = styled.div`
 margin: 11px 0 20px 0;
 font-weight: 800;
 font-size: 20px;
+
+@media (max-width: 800px) { 
+  font-size: 18px;
+ }
 `
 
 const Modulos = styled.div`

@@ -69,11 +69,10 @@ const Simulador = ({ lista, valoresMec, valoresBox, descontoFilial, acessosPropo
   }
 
   const handleCheckModulo = (moduloAlterado: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(moduloAlterado.target.id)
 
     const oficina = listaAtual.filter(modulo => modulo.ID === 6)
     const venda = listaAtual.filter(modulo => modulo.ID === 5)
-
+    const nfs = listaAtual.filter(modulo => modulo.ID === 7)
 
 
     if (!oficina[0].MARC && moduloAlterado.target.id === "5" && moduloAlterado.target.checked === false) {
@@ -89,6 +88,27 @@ const Simulador = ({ lista, valoresMec, valoresBox, descontoFilial, acessosPropo
         position: "top-center",
         toastId: "customId",
       })
+
+    } else if (nfs[0].MARC && moduloAlterado.target.id === "6" && moduloAlterado.target.checked === false) {
+      moduloAlterado.target.checked = true
+      toast.warn('Para desativar o módulo OFICINA, é necessário desativar o módulo: NFS-E.', {
+        position: "top-center",
+        toastId: "customId",
+      })
+
+    } else if (!oficina[0].MARC && moduloAlterado.target.id === "7" && moduloAlterado.target.checked === true) {
+      toast.warn('Para ativar o módulo NFS-E, é necessário ativar o módulo: OFICINA. O módulo oficina foi ativado.', {
+        position: "top-center",
+        toastId: "customId",
+      })
+
+      const listaAlterada = listaAtual.map(modulo => {
+        if (modulo.ID === Number(moduloAlterado.target.id) || modulo.ID === 6) {
+          modulo.MARC = moduloAlterado.target.checked
+        }
+        return modulo
+      })
+      setListaAtual(listaAlterada)
     }
 
     else {

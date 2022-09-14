@@ -17,7 +17,7 @@ const Topo = ({ nome, validade }: {nome:string, validade:Date}) => {
         <Texto>Quanto aos módulos, você contrata somente o que realmente precisar.</Texto>
         <Texto><b>Importante:</b> a qualquer momento você poderá remover e/ou acrescentar novos módulos em seu plano.</Texto>
         <Validade>
-          <span className={validade < new Date() ? "vencida" : ""}>Proposta válida até: {format(validade, 'dd/MM/yyyy')}</span>
+          <span className={validade <= new Date() ? "vencida" : ""}>Proposta válida até: {format(validade, 'dd/MM/yyyy')}</span>
         </Validade>
       </Container>
     </>

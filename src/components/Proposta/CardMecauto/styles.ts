@@ -6,6 +6,9 @@ height: 394px;
 box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
 border-radius: 30px;
 
+@media (max-width: 800px) { 
+  margin-bottom: 15px;
+ }
 `
 
 const Titulo = styled.div`

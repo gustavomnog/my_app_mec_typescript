@@ -20,6 +20,11 @@ button {
   font-size: 22px;
   font-weight: 500;
   transition: background 0.2s linear;
+
+  @media (max-width: 800px) { 
+    width: 280px;
+  font-size: 20px;
+ }
 }
 
 button:hover{

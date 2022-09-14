@@ -15,6 +15,9 @@ background: var(--background-grey);
 font-weight: 900;
 font-size: 30px;
 
+@media (max-width: 800px) { 
+  font-size: 23px;
+ }
 `
 const ContainerRight = styled.div`
 display: flex;
@@ -30,6 +33,10 @@ const Logo = styled.img`
 width: 21.87rem;
 height: 4rem;
 margin: auto;
+
+@media (max-width: 800px) { 
+  width: 16rem;
+ }
 `
 
 

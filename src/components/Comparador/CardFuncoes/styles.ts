@@ -6,17 +6,27 @@ margin: 0 15.5px 27px 15.5px;
 border: 1px solid #C2C3C5;
 border-radius: 30px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 `
 
 const Titulo = styled.div`
 margin: 20px;
 font-weight: 800;
 font-size: 20px;
+
+@media (max-width: 800px) { 
+  font-size: 18px;
+ }
 `
 
 const Tabela = styled.table`
 margin: 15px;
 font-size: 20px;
+
+@media (max-width: 800px) { 
+  font-size: 17px;
+ }
+
 `
 const BodyTabela = styled.tbody`
 
@@ -40,6 +50,10 @@ justify-content: space-between;
 .funcao{
   text-transform: capitalize;
   width: 365px;
+
+  @media (max-width: 800px) { 
+    width: 305px;
+ }
  
   .iconHelp{
     width: 1.5rem;
@@ -63,6 +77,11 @@ justify-content: space-between;
   align-items: center;
   width: 150px;
   margin-right: 30px;
+
+  @media (max-width: 800px) { 
+    margin-right: 0;
+    width: 110px;
+ }
   
   span{
   font-size: 0.8rem;
@@ -77,6 +96,11 @@ justify-content: space-between;
   align-items: center;
   width: 150px;
 
+  @media (max-width: 800px) { 
+    margin-right: 0;
+    width: 110px;
+ }
+
   span{
   font-size: 0.8rem;
   line-height: 1rem;
@@ -86,6 +110,7 @@ justify-content: space-between;
 `
 const CelulaTabela = styled.td`
 padding: 5px 0;
+
 `
 
 const ButtonExibir = styled.div`

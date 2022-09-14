@@ -8,6 +8,11 @@ box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
 border-radius: 30px;
 background  : var(--background-white);
 margin: 34px auto 0 auto;
+
+ @media (max-width: 800px) { 
+  width: 600px;
+ }
+
 `
 const Titulo = styled.div`
 display: flex;
@@ -19,12 +24,20 @@ font-weight: 700;
 font-size: 28px;
 color: var(--white);
 background: var(--background-red);
+
+@media (max-width: 800px) { 
+  font-size: 23px;
+ }
 `
 const Texto = styled.p`
   padding: 20px 17px 0 17px;
   font-size: 1.25rem;
   line-height: 1.87rem;
   text-align: justify;
+
+  @media (max-width: 800px) { 
+  font-size: 17px;
+ }
 `
 
 const Validade = styled.p`
@@ -38,10 +51,14 @@ font-size: 20px;
 line-height: 30px;
 color: var(--green);
 
-
   .vencida{
     color: var(--red);
   }
+
+
+  @media (max-width: 800px) { 
+  font-size: 17px;
+ }
 
 `
 

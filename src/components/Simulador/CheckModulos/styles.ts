@@ -10,6 +10,10 @@ padding-bottom: 16.13px;
   align-items: center;
   cursor: pointer;
   
+
+  :hover .checkmark {
+    background-color: var(--background);
+  }
   
   .input-wrapper {
     position: relative;

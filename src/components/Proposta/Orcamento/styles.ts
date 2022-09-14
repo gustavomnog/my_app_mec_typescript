@@ -7,6 +7,10 @@ box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
 border-radius: 30px;
 margin: 34px auto 0 auto;
 background-color: var(--background-white);
+
+ @media (max-width: 800px) { 
+  width: 600px;
+ }
 `
 
 const Titulo = styled.div`
@@ -19,6 +23,10 @@ font-weight: 700;
 font-size: 28px;
 color: #FFFFFF;
 background: var(--background-red);
+
+@media (max-width: 800px) { 
+  font-size: 23px;
+ }
 `
 
 const ContainerModulos = styled.div`
@@ -47,6 +55,13 @@ const ContainerCards = styled.div`
 display: flex;
 justify-content: space-between;
 margin: 25px 15.5px 15.5px 15.5px;
+
+
+@media (max-width: 800px) { 
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+
 `
 
 const Obs = styled.div`

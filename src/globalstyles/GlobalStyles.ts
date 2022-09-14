@@ -8,9 +8,10 @@ const GlobalStyles = createGlobalStyle`
      
      --blue: #334B88;
 
+     --green: #19962D;
      --green-dark: #2D6D3F;
      
-     --grey: #474747; 
+     --grey: #474747;
     
      --white: #FFFFFF;
      
@@ -26,29 +27,17 @@ const GlobalStyles = createGlobalStyle`
       box-sizing: border-box;
   }
 
-
-  html {
+body {
       font-size: 16px;
       color: var(--grey);
-
-      @media (max-width: 1080px){
-          font-size: 93.75%; //15px
-      }
-
-      @media (max-width: 720px){
-          font-size: 87.5%; //14px
-      }
-
-      @media (max-width: 640px){
-          font-size: 82.5%; 
-      }
-  }
-
-  body {
       background-color: var(--background);
+
+    @media (max-width: 800px) { 
+    font-size: 90%;
+ }
   }
 
-  body, input, textarea, button {
+  body, input, button {
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
   }

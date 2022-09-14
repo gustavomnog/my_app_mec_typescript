@@ -24,6 +24,10 @@ font-size: 20px;
 font-weight: 800;
 text-align: center;
 padding: 21px 0;
+
+@media (max-width: 800px) { 
+  font-size: 18px;
+ }
 `
 
 const Tabela = styled.div`

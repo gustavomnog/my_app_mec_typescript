@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Container = styled.div`
-width: 100%;
+width: 364px;
 box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
 border-radius: 30px;
 padding-bottom: 5px;
@@ -48,6 +48,7 @@ th, td{
 td {
   font-size: 15px;
   text-align: center;
+  width: 75px
 }
 
 th {

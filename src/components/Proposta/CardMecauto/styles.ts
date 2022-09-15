@@ -51,6 +51,7 @@ th, td{
 td {
   font-size: 15px;
   text-align: center;
+  width:75px;
 }
 
 th {

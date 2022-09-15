@@ -9,6 +9,7 @@ padding-bottom: 16.13px;
   display: flex;
   align-items: center;
   cursor: pointer;
+  width: 160px;
   
 
   :hover .checkmark {

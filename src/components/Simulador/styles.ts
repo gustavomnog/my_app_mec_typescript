@@ -89,6 +89,8 @@ align-content: space-around;
 `
 
 const ContainerCard = styled.div`
+display: flex;
+justify-content: center;
 margin: 0 15.5px;
 `
 

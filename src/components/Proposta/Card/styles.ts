@@ -6,9 +6,10 @@ height: 394px;
 box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
 border-radius: 30px;
 
-@media (max-width: 800px) { 
-  margin-bottom: 15px;
- }
+.mecauto-box{
+  background-color: var(--green-dark);
+
+}
 `
 
 const Titulo = styled.div`
@@ -19,18 +20,28 @@ color: var(--white);
 font-size: 20px;
 text-align: center;
 
+
+.link {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 span {
   display: block;
+  font-size: 13px;
 }
 
 span:first-child {
+  font-size: 20px;
   font-weight: 800;
   padding: 8px 0;
+  text-transform: uppercase;
 }
 
-span:last-child {
-  font-size: 13px;
- }
+a {
+  color: var(--white);
+}
 `
 
 const Tabela = styled.div`
@@ -57,6 +68,7 @@ td {
 th {
   text-align: left;
 }
+
 tr{
   font-weight: 500;
 }

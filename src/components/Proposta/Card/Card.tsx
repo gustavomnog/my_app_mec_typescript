@@ -1,15 +1,17 @@
+import { Link } from "react-scroll"
 import { Valores } from "../../interfaces/types"
 
 import { Container, Tabela, Titulo } from "./styles"
 
 
 type Props = {
-  valorSistemaMec: Valores,
+  valorSistema: Valores,
   acessos: number,
+  sistema: string,
 }
 
-const CardMecauto = ({ valorSistemaMec, acessos }: Props) => {
-  const { ANU, ANU2, ANU3, SEM, SEM2, TRI, MEN } = valorSistemaMec
+const Card = ({ valorSistema, acessos, sistema }: Props) => {
+  const { ANU, ANU2, ANU3, SEM, SEM2, TRI, MEN } = valorSistema
 
   const descontoAnu = Math.round((((MEN * 12) - ANU) / (MEN * 12)) * 100)
   const descontoSem = Math.round((((MEN * 6) - SEM) / (MEN * 6)) * 100)
@@ -18,9 +20,12 @@ const CardMecauto = ({ valorSistemaMec, acessos }: Props) => {
 
   return (
     <Container>
-      <Titulo>
-        <span>MECAUTO</span>
-        <span>Sistema com mais funções.</span>
+      <Titulo className={sistema}>
+        <span>{sistema}</span>
+        <span>{sistema === 'mecauto' ? 'Sistema com mais funções.' : 'Sistema com funções mais básicas.'}</span>
+        {sistema === 'mecauto-box' && (
+          <span><Link className="link" to="comparador" spy={true} smooth={true} offset={50} duration={500}>CLIQUE AQUI</Link> para comparar as diferenças</span>
+        )}
       </Titulo>
       <Tabela>
         <table>
@@ -73,4 +78,4 @@ const CardMecauto = ({ valorSistemaMec, acessos }: Props) => {
 }
 
 
-export default CardMecauto
+export default Card

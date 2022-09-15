@@ -5,18 +5,19 @@ const Container = styled.div`
 padding-bottom: 16.13px;
 
 
-.container {
-  display: flex;
-  align-items: center;
-}
-
+.hoverEnable {
+  cursor: pointer;
   
-.containerBold {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
+  :hover .checkmark {
+    background-color: var(--background);
+  }
 }
 
+label {
+  display: flex;
+  align-items: center;
+  width: 160px; 
+}
 
 .input-wrapper {
   position: relative;
@@ -25,21 +26,19 @@ padding-bottom: 16.13px;
   padding-right: 25px;
 }
 
-input{
+.inputCheck{
   opacity:0 ;
   width: 0;
   height: 0;
 }
 
-input:checked + .checkmark {
+.inputCheck:checked + .checkmark {
   background-color: var(--blue);
 }
 
-input:checked + .checkmark::after{
+.inputCheck:checked + .checkmark::after{
   display: block;
 }
-
-
 
 .checkmark{
   position: absolute;
@@ -53,17 +52,24 @@ input:checked + .checkmark::after{
 }
 
 .checkmark::after {
-content: "";
-position: absolute;
-display: none;
-left: 4px;
-width: 5px;
-height: 10px;
-border: 1px solid #FFFFFF;
-border-width: 0 2px 2px 0;
-transform: rotate(45deg);
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  width: 5px;
+  height: 10px;
+  border: 1px solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
-`
+
+.textBold {
+  font-weight: bold;
+}
+
+
+
+  `
 
 
 export { Container }

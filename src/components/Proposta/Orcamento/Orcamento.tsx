@@ -1,19 +1,18 @@
-import CheckModulos from "../CheckModulos/CheckModulos"
-import CardMecauto from "../CardMecauto/CardMecauto"
-import CardBox from "../CardBox/CardBox"
-import {ListaModulos, Valores} from "../../interfaces/types"
+import CheckModulos from "../../CheckModulos/CheckModulos"
+import Card from "../Card/Card"
+import { ListaModulos, Valores } from "../../interfaces/types"
 
 import { Container, ContainerCards, ContainerModulos, Modulos, Titulo, TituloModulos, Obs } from "./styles"
 
 
 type Props = {
-  lista: ListaModulos[], 
-  valorTotalMec: Valores, 
-  valorTotalBox: Valores, 
+  lista: ListaModulos[],
+  valorTotalMec: Valores,
+  valorTotalBox: Valores,
   acessos: number,
 }
-const Orcamento = ({ lista, valorTotalMec, valorTotalBox, acessos}: Props) => {
-  
+const Orcamento = ({ lista, valorTotalMec, valorTotalBox, acessos }: Props) => {
+
   return (
     <Container>
       <Titulo>Seu orçamento</Titulo>
@@ -22,22 +21,12 @@ const Orcamento = ({ lista, valorTotalMec, valorTotalBox, acessos}: Props) => {
           <span>Esses são os módulos disponíveis. Os que estão marcados, são os que você solicitou:</span>
         </TituloModulos>
         <Modulos>
-          {
-            lista.map((modulo: ListaModulos) => {
-
-              return (
-                <CheckModulos
-                  key={modulo.ID}
-                  nomeModulo={modulo.DESCRICAO}
-                  selecionado={modulo.MARC}
-                />)
-            })
-          }
+        <CheckModulos listaAtual={lista}/>
         </Modulos>
       </ContainerModulos>
       <ContainerCards>
-        <CardMecauto valorSistemaMec={valorTotalMec} acessos={acessos}/>
-        <CardBox valorSistemaBox={valorTotalBox} acessos={acessos}/>
+        <Card valorSistema={valorTotalMec} acessos={acessos} sistema={'mecauto'} />
+        <Card valorSistema={valorTotalBox} acessos={acessos} sistema={'mecauto-box'} />
       </ContainerCards>
       <Obs>
         <span>* Um acesso está incluso no plano e quatro são cortesia. A partir do sexto acesso, é cobrado valor adicional.</span>

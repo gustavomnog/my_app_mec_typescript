@@ -4,7 +4,7 @@ import { toast, ToastContainer } from "react-toastify"
 import Button from "./Button/Button"
 import RadioSistema from "./RadioSistema/RadioSistema"
 import QtdAcessos from "./QtdAcessos/QtdAcessos"
-import CheckModulos from "./CheckModulos/CheckModulos"
+import CheckModulos from "../CheckModulos/CheckModulos"
 import CardSistema from "./CardSistema/CardSistema"
 import valorTotal from "../CalculoTotal/calculoTotal"
 import { Valores, ListaModulos } from "../interfaces/types"
@@ -147,7 +147,7 @@ const Simulador = ({ lista, valoresMec, valoresBox, descontoFilial, acessosPropo
 
   return (
     <>
-      <ToastContainer style={{ width: "770px", fontWeight: "bold" }} />
+      <ToastContainer style={{ width: "600px", fontWeight: "bold" }} />
       <Button handleOpenSimulator={handleOpenSimulator} exibir={exibir} />
       {exibir && (
         <Container>

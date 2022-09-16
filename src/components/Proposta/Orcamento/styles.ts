@@ -47,7 +47,8 @@ const Modulos = styled.div`
 display: flex;
 flex-wrap: wrap ;
 flex-direction: column;
-height: 145px;
+padding: 18.5px 23.5px 0 23.5px;
+height: 130px;
 align-content: space-around;
 `
 

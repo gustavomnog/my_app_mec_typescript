@@ -71,7 +71,7 @@ text-align:center;
 `
 
 const TituloModulos = styled.div`
-margin: 11px 0 20px 0;
+margin-top: 11px;
 font-weight: 800;
 font-size: 20px;
 
@@ -84,7 +84,8 @@ const Modulos = styled.div`
 display: flex;
 flex-wrap: wrap ;
 flex-direction: column;
-height: 145px;
+padding: 27.5px 23.5px 0 23.5px;
+height: 140px;
 align-content: space-around;
 `
 

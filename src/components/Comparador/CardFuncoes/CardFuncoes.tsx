@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { IoBan, IoCheckmarkCircleOutline, IoChevronDownOutline, IoChevronUpOutline } from "react-icons/io5"
+import { IoBanOutline, IoChevronDownOutline, IoChevronUpOutline } from "react-icons/io5"
+import { BsCheck2Circle } from "react-icons/bs"
 import Ajuda from "./Ajuda/Ajuda"
 import { Funcoes } from "../../interfaces/types"
 
@@ -34,12 +35,12 @@ const CardFuncoes = ({ grupo }: Props) => {
                   </div>
                   <div className="iconsWrapper">
                     <div className="mecauto">
-                      {funcao.CM_SIST_MEC === "S" ? <IoCheckmarkCircleOutline className="icon" /> : <span>{funcao.CM_COND}</span>}
+                      {funcao.CM_SIST_MEC === "S" ? <BsCheck2Circle className="icon" /> : <span>{funcao.CM_COND}</span>}
                     </div>
                     <div className="box">
                       {funcao.CM_SIST_MECBOX === "S"
-                        ? <IoCheckmarkCircleOutline className="icon" />
-                        : funcao.CM_COND != null ? <span>{funcao.CM_COND}</span> : <IoBan className="icon iconBan" />}
+                        ? <BsCheck2Circle className="icon" />
+                        : funcao.CM_COND != null ? <span>{funcao.CM_COND}</span> : <IoBanOutline className="icon iconBan" />}
                     </div>
                   </div>
                 </LinhaFuncoes>
@@ -53,8 +54,6 @@ const CardFuncoes = ({ grupo }: Props) => {
           {exibirFuncoes ? <IoChevronUpOutline className="icon" /> : <IoChevronDownOutline className="icon" />}
         </button>
       </ButtonExibir>
-
-
     </Container>
   )
 }

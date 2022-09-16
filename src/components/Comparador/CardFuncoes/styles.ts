@@ -112,11 +112,13 @@ padding:5px 0 5px 0;
 .icon {
   width: 25px;
   height:25px;
-  color: var(--green-dark);
+  color: var(--green);
 }
 
 
 .iconBan{
+  width: 25px;
+  height:25px;
   color: var(--red);
 }
 `

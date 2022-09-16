@@ -19,44 +19,27 @@ font-size: 20px;
  }
 `
 
-const Tabela = styled.table`
+const ContainerFuncoes = styled.div`
 margin: 15px;
 font-size: 20px;
 
 @media (max-width: 800px) { 
   font-size: 17px;
  }
-
 `
-const BodyTabela = styled.tbody`
-
-`
-const LinhaTabela = styled.tr`
-width:100%;
+const LinhaFuncoes = styled.div`
 display: flex;
 align-items: center;
-justify-content: space-between;
-
-.icon {
-  width: 25px;
-  height:25px;
-  color: var(--green-dark);
-}
-
-.iconBan{
-  color: var(--red);
-}
+width:100%;
+padding:5px 0 5px 0;
 
 .funcao{
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   text-transform: capitalize;
   width: 365px;
+  flex-wrap: wrap;
 
-  @media (max-width: 800px) { 
-    width: 305px;
- }
  
   .iconHelp{
     width: 1.5rem;
@@ -67,53 +50,75 @@ justify-content: space-between;
   }
 
   span{
-    display: block;
+    width: 362px;
     font-size: 13px;
     text-transform: none;
     margin-top: 5px;
+
+    @media (max-width: 800px) { 
+      width: 285px;
+   }
   }
 }
 
-.mecauto{
+.iconsWrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  margin-right: 30px;
+  justify-content: space-between;
+  width:334px;
+
 
   @media (max-width: 800px) { 
-    margin-right: 0;
-    width: 110px;
- }
+      padding-right: 45.5px;
+      width:210px;
+   }
+   
+  .mecauto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:157px;
+    
   
-  span{
-  font-size: 0.8rem;
-  line-height: 1rem;
-  text-align: center;
-}
+    @media (max-width: 800px) { 
+      margin-right: 0;
+      width:41px;
+   }
+    
+    span{
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    }
+  }
+  
+  .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:157px;
+  
+    @media (max-width: 800px) { 
+      width:41px;
+   }
+  
+    span{
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    }
+  }
 }
 
-.box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-
-  @media (max-width: 800px) { 
-    margin-right: 0;
-    width: 110px;
- }
-
-  span{
-  font-size: 0.8rem;
-  line-height: 1rem;
-  text-align: center;
+.icon {
+  width: 25px;
+  height:25px;
+  color: var(--green-dark);
 }
-}
-`
-const CelulaTabela = styled.td`
-padding: 5px 0;
 
+
+.iconBan{
+  color: var(--red);
+}
 `
 
 const ButtonExibir = styled.div`
@@ -143,4 +148,4 @@ button{
 }
 `
 
-export { Container, Titulo, Tabela, BodyTabela, LinhaTabela, CelulaTabela, ButtonExibir }
+export { Container, Titulo, ContainerFuncoes, LinhaFuncoes, ButtonExibir }

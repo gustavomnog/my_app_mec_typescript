@@ -5,6 +5,7 @@ import {
 } from "react-router-dom"
 
 import Proposta from "./components/Proposta/Proposta"
+import Tabela from "./components/TabelaComparacao/Tabela"
 import GlobalStyle from "./globalstyles/GlobalStyles"
 
 function App() {
@@ -12,8 +13,8 @@ function App() {
     <BrowserRouter>
       <>
         <Routes>
-          <Route path=":codproposta/:codcliente"
-            element={<Proposta />} />
+          <Route path=":codproposta/:codcliente" element={<Proposta />} />
+          <Route path="tabela" element={<Tabela />} />
         </Routes>
         <GlobalStyle />
       </>

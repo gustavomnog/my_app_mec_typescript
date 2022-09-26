@@ -50,7 +50,7 @@ const CardFuncoes = ({ grupo }: Props) => {
           }
         </ContainerFuncoes>
       )}
-      <Link className="link" to={tituloGrupo} spy={true} smooth={true} offset={-200} duration={500}>
+      <Link className="link" to={tituloGrupo} spy={true} smooth={true} offset={-100} duration={500}>
       <ButtonExibir>
         <button onClick={handleShowFunction}>{exibirFuncoes ? "Ocultar funções" : "Ver funçoes"}
           {exibirFuncoes ? <IoChevronUpOutline className="icon" /> : <IoChevronDownOutline className="icon" />}

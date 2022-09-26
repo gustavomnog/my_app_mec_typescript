@@ -4,11 +4,13 @@ import CardFuncoes from "./CardFuncoes/CardFuncoes"
 import { Funcoes } from "../interfaces/types"
 
 import { Container, Titulo, ContainerSistema, Sistema } from "./styles"
+import Loading from "../Loading/Loading"
 
 
 const Comparador = () => {
   const [carregando, setCarregando] = useState<boolean>(true)
   const [listaAtual, setListaAtual] = useState<Funcoes[][]>([] as Funcoes[][])
+
 
   useEffect(() => {
     async function ObterFuncoes() {
@@ -44,7 +46,7 @@ const Comparador = () => {
 
   if (carregando) {
     return (
-      <></>
+      <Loading />
     )
   } else {
 

@@ -5,6 +5,7 @@ import Ajuda from "./Ajuda/Ajuda"
 import { Funcoes } from "../../interfaces/types"
 
 import { Container, Titulo, ContainerFuncoes, LinhaFuncoes, ButtonExibir } from "./styles"
+import { Link } from "react-scroll"
 
 type Props = {
   grupo: Funcoes[],
@@ -21,7 +22,7 @@ const CardFuncoes = ({ grupo }: Props) => {
 
 
   return (
-    <Container>
+    <Container id={tituloGrupo}>
       <Titulo>{tituloGrupo}</Titulo>
       {exibirFuncoes && (
         <ContainerFuncoes>
@@ -49,11 +50,13 @@ const CardFuncoes = ({ grupo }: Props) => {
           }
         </ContainerFuncoes>
       )}
+      <Link className="link" to={tituloGrupo} spy={true} smooth={true} offset={-200} duration={500}>
       <ButtonExibir>
         <button onClick={handleShowFunction}>{exibirFuncoes ? "Ocultar funções" : "Ver funçoes"}
           {exibirFuncoes ? <IoChevronUpOutline className="icon" /> : <IoChevronDownOutline className="icon" />}
         </button>
       </ButtonExibir>
+      </Link>
     </Container>
   )
 }

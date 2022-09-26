@@ -3,13 +3,17 @@ import styled from "styled-components"
 
 const Container = styled.header`
 display: flex;
+
+@media (max-width: 600px) { 
+  width: 600px;
+ }
 `
 
 const ContainerLeft = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-width: 50vw;
+width: 50%;
 height: 70px;
 background: var(--background-grey);
 font-weight: 900;
@@ -23,7 +27,7 @@ const ContainerRight = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-width: 50vw;
+width: 50%;
 height: 70px;
 background: var(--background-red);
 text-align: center;

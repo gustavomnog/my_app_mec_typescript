@@ -62,7 +62,6 @@ margin: 25px 15.5px 15.5px 15.5px;
   flex-wrap: wrap;
   justify-content: center;
  }
-
 `
 
 const Obs = styled.div`

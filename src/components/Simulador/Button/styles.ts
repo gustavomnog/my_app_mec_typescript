@@ -5,6 +5,9 @@ const Container = styled.div`
  justify-content:center;
  margin: 45px 0;
 
+ @media (max-width: 600px) { 
+  width: 600px;
+ }
 
 button {
   display:flex;

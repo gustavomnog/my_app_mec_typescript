@@ -24,7 +24,7 @@ const Card = ({ valorSistema, acessos, sistema }: Props) => {
         <span>{sistema}</span>
         <span>{sistema === 'mecauto' ? 'Sistema com mais funções.' : 'Sistema com funções mais básicas.'}</span>
         {sistema === 'mecauto-box' && (
-          <span><Link className="link" to="comparador" spy={true} smooth={true} offset={50} duration={500}>CLIQUE AQUI</Link> para comparar as diferenças</span>
+          <span><Link className="link" to="comparador" spy={true} smooth={true} duration={500}>CLIQUE AQUI</Link> para comparar as diferenças</span>
         )}
       </Titulo>
       <Tabela>

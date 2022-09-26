@@ -16,7 +16,6 @@ padding-bottom: 16.13px;
 label {
   display: flex;
   align-items: center;
-  width: 160px; 
 }
 
 .input-wrapper {

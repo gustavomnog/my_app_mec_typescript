@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import api from "../../services/api"
 import CardFuncoes from "./CardFuncoes/CardFuncoes"
-import { Funcoes } from "../interfaces/types"
+import { Funcoes } from "../../interfaces/types"
 
 import { Container, Titulo, ContainerSistema, Sistema } from "./styles"
 import Loading from "../Loading/Loading"

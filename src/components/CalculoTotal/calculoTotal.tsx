@@ -1,5 +1,5 @@
 
-import { Valores } from "../interfaces/types"
+import { Valores } from "../../interfaces/types"
 
 function valorTotal(valorSistema: Valores, descontoFilial: string, acessos: number) {
   let i: keyof typeof valorSistema

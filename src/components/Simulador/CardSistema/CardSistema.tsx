@@ -1,4 +1,4 @@
-import { Valores } from "../../interfaces/types"
+import { Valores } from "../../../interfaces/types"
 
 import { Container, Tabela, Titulo } from "./styles"
 

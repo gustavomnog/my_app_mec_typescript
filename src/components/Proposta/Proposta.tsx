@@ -11,7 +11,7 @@ import Simulador from "../Simulador/Simulador"
 import Comparador from "../Comparador/Comparador"
 import Footer from "../Footer/Footer"
 
-import { Valores, ListaModulosApi, ListaModulos } from "../interfaces/types"
+import { Valores, ListaModulosApi, ListaModulos } from "../../interfaces/types"
 
 
 const Proposta = () => {

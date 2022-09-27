@@ -7,7 +7,7 @@ import QtdAcessos from "./QtdAcessos/QtdAcessos"
 import CheckModulos from "../CheckModulos/CheckModulos"
 import CardSistema from "./CardSistema/CardSistema"
 import valorTotal from "../CalculoTotal/calculoTotal"
-import { Valores, ListaModulos } from "../interfaces/types"
+import { Valores, ListaModulos } from "../../interfaces/types"
 
 import { Container, Titulo, ContainerSistema, TituloSistema, ContainerRadio, ContainerAcessos, ContainerModulos, TituloModulos, Modulos, ContainerCard, Obs } from "./styles"
 import 'react-toastify/dist/ReactToastify.min.css';

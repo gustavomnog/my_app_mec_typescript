@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ListaModulos } from "../interfaces/types"
+import { ListaModulos } from "../../interfaces/types"
 
 import { Container } from "./styles"
 

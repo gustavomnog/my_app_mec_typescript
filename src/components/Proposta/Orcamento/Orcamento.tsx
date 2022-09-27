@@ -1,6 +1,6 @@
 import CheckModulos from "../../CheckModulos/CheckModulos"
 import Card from "../Card/Card"
-import { ListaModulos, Valores } from "../../interfaces/types"
+import { ListaModulos, Valores } from "../../../interfaces/types"
 
 import { Container, ContainerCards, ContainerModulos, Modulos, Titulo, TituloModulos, Obs } from "./styles"
 

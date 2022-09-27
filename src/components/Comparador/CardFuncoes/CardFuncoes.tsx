@@ -2,7 +2,7 @@ import { useState } from "react"
 import { IoBanOutline, IoChevronDownOutline, IoChevronUpOutline } from "react-icons/io5"
 import { BsCheck2Circle } from "react-icons/bs"
 import Ajuda from "./Ajuda/Ajuda"
-import { Funcoes } from "../../interfaces/types"
+import { Funcoes } from "../../../interfaces/types"
 
 import { Container, Titulo, ContainerFuncoes, LinhaFuncoes, ButtonExibir } from "./styles"
 import { Link } from "react-scroll"

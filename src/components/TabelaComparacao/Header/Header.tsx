@@ -1,5 +1,5 @@
 import { Container, Logo } from './styles'
-import logo from './logoHeader.svg'
+import logo from '../../Header/logoHeader.svg'
 
 const Header = () => {
   return (
